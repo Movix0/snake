@@ -1,0 +1,7 @@
+C:\Users\evgen\OneDrive\Документы\snake\Snake\Snake\bin\Debug\Snake.exe.config
+C:\Users\evgen\OneDrive\Документы\snake\Snake\Snake\bin\Debug\Snake.exe
+C:\Users\evgen\OneDrive\Документы\snake\Snake\Snake\bin\Debug\Snake.pdb
+C:\Users\evgen\OneDrive\Документы\snake\Snake\Snake\obj\Debug\Snake.csprojAssemblyReference.cache
+C:\Users\evgen\OneDrive\Документы\snake\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+C:\Users\evgen\OneDrive\Документы\snake\Snake\Snake\obj\Debug\Snake.exe
+C:\Users\evgen\OneDrive\Документы\snake\Snake\Snake\obj\Debug\Snake.pdb
