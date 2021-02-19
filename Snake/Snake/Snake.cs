@@ -4,22 +4,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Snake 
+namespace Snake
 {
     class Snake : Figure
     {
-
+        Direction direction;
         public Snake(Point tail, int lenght, Direction direction)
         {
+            this.direction = direction;
             for (int i = 0; i < lenght; i++)
             {
-
                 Point p = new Point(tail);
                 p.Move(i, direction);
                 pList.Add(p);
             }
 
 
+        }
+             internal void Move() 
+        {
+            Point tail = pList.First();
+            pList.Remove(tail);
+            Point head = getNextPoint();
+            pList.Add(head);
+
+            tail.Clear();
+            head.Draw();
+        }
+        public Point getNextPoint()
+        {   
+            Point head = pList.Last();
+            Point nextPoint = new Point(head);
+            nextPoint.Move(1, direction);
+            return nextPoint;
         }
     }
 }

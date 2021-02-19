@@ -53,6 +53,27 @@ namespace Snake
             Console.Write(sym1);
         }
 
-     
+        public void Clear()
+        {
+            sym1 = ' ';
+            Draw();
+        }
+        public int getX()
+        {
+            int x = x1;
+            return x;
+        }
+
+        public int gety()
+        {
+            int y = y1;
+            return y;
+        }
+
+        public char getSym()
+        {
+            char sym = sym1;
+            return sym;
+        }
     }
 }
