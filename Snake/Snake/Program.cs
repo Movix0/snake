@@ -12,7 +12,7 @@ namespace Snake
         static void Main(string[] args)
         {
 
-            HLine hl = new HLine(0, 119, 0, '#') ;
+            HLine hl = new HLine(0, 119, 0, '#');
             hl.Draw();
             VLine vl = new VLine(119, 1, 29, '#');
             vl.Draw();
@@ -22,23 +22,10 @@ namespace Snake
             vl1.Draw();
 
             Point p = new Point(4, 5, '*');
-            Snake snake= new Snake(p, 4, Direction.RIGHT);
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Draw();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-
-            Console.ReadLine();
+            snake.Handler();
         }
-    }
+    }      
 }
+

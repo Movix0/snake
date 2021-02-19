@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Snake
 {
     class Snake : Figure
     {
-        Direction direction;
+        public Direction direction;
         public Snake(Point tail, int lenght, Direction direction)
         {
             this.direction = direction;
@@ -37,6 +38,27 @@ namespace Snake
             Point nextPoint = new Point(head);
             nextPoint.Move(1, direction);
             return nextPoint;
+        }
+        public void Handler()
+        {
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    Console.Write("\b \b");
+                    if (key.Key == ConsoleKey.D)
+                        direction = Direction.RIGHT;
+                    else if (key.Key == ConsoleKey.A)
+                        direction = Direction.LEFT;
+                    else if (key.Key == ConsoleKey.W)
+                        direction = Direction.UP;
+                    else if (key.Key == ConsoleKey.S)
+                        direction = Direction.DOWN;
+                }
+                Thread.Sleep(100);
+                Move();
+            }
         }
     }
 }
